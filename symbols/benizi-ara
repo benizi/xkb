@@ -1,0 +1,83 @@
+// based on a keyboard map from an 'xkb/symbols/ar' file
+
+partial alphanumeric_keys alternate_group
+xkb_symbols "phonetic" {
+    name[Group1]= "Arabic - phonetic";
+
+    include "benizi(caps)"
+    include "benizi(menu-menu)"
+
+    key <RALT> { type[Group1]="TWO_LEVEL",
+                 symbols[Group1] = [ ISO_Level3_Shift, Multi_key ] };
+    key <TLDE> {  [ grave,        asciitilde      ] };
+    key <AE11> {  [ minus,        Arabic_tatweel      ] };
+    key <AE12> {  [ equal,        plus            ] };
+						
+    key <AD01> {  [ Arabic_qaf,   Arabic_fatha    ] };
+    key <AD02> { type="THREE_LEVEL", symbols[Group1]=
+                  [ Arabic_sheen, Arabic_fathatan, Arabic_shadda ] };
+    key <AD03> {  [ Arabic_ain,   Arabic_damma    ] };
+    key <AD04> {  [ Arabic_ra,    Arabic_dammatan ] };
+    key <AD05> {  [ Arabic_teh,   Arabic_tah      ] };
+    key <AD06> {  [ Arabic_theh,  Arabic_yeh      ] };
+    key <AD07> { type="FOUR_LEVEL", symbols[Group1]=
+    [ Arabic_waw, Arabic_waw, Arabic_damma, Arabic_dammatan ] };
+    key <AD08> { type="FOUR_LEVEL", symbols[Group1]=
+    [ Arabic_yeh, Arabic_alefmaksura, Arabic_kasra, Arabic_kasratan ] };
+    key <AD09> { type="THREE_LEVEL", symbols[Group1]=
+                  [ Arabic_ha,    Arabic_tehmarbuta, Arabic_sukun ] };
+    key <AD10> {  [ Arabic_hah,   Arabic_semicolon ] };
+    key <AD11> {  [ bracketleft,  braceleft       ] };
+    key <AD12> {  [ bracketright, braceright      ] };
+
+    key <AC01> { type="FOUR_LEVEL", symbols[Group1]=
+    [ Arabic_alef, Arabic_maddaonalef, Arabic_fatha, Arabic_fathatan ] };
+    key <AC02> { type="THREE_LEVEL", symbols[Group1]=
+                  [ Arabic_seen,  Arabic_sad, Arabic_shadda ] };
+    key <AC03> {  [ Arabic_dal,   Arabic_dad      ] };
+    key <AC04> {  [ Arabic_feh,   bracketright    ] };
+    key <AC05> {  [ Arabic_ghain, 0x100fef7       ] };
+    key <AC06> {  [ Arabic_hah,   Arabic_hamzaonalef ] };
+    key <AC07> {  [ Arabic_jeem,  Arabic_tatweel  ] };
+    key <AC08> {  [ Arabic_kaf,   Arabic_comma    ] };
+    key <AC09> {  [ Arabic_lam,   slash           ] };
+    key <AC10> {  [ Arabic_kaf,   colon           ] };
+    key <AC11> { type="THREE_LEVEL", symbols[Group1]=
+                  [ Arabic_tah,   quotedbl, Arabic_superscript_alef ] };
+    key <BKSL> {  [ Arabic_hamzaunderalef, Arabic_hamzaonalef ] };
+
+    key <LSGT> {  [ bar,          brokenbar       ] };
+    key <AB01> {  [ Arabic_zain,  Arabic_zah      ] };
+    key <AB02> {  [ Arabic_khah,  Arabic_sukun    ] };
+    key <AB03> { type="FOUR_LEVEL", symbols[Group1]=
+    [ Arabic_hamza, Arabic_kasra, Arabic_hamza_above, Arabic_hamza_below ] };
+    key <AB04> {  [ Arabic_thal,  Arabic_kasratan ] };
+    key <AB05> {  [ Arabic_beh,   0x100fef5       ] };
+    key <AB06> {  [ Arabic_noon,  Arabic_maddaonalef ] };
+    key <AB07> {  [ Arabic_meem,  apostrophe      ] };
+    key <AB08> { type="THREE_LEVEL", symbols[Group1]=
+                  [ Arabic_comma, less, comma ] };
+    key <AB09> {  [ period,       greater         ] };
+    key <AB10> { type="THREE_LEVEL", symbols[Group1]=
+                  [ slash, Arabic_question_mark, question ] };
+
+    // End alphanumeric section
+};
+
+partial alphanumeric_keys
+xkb_symbols "digits3" {
+    include "benizi-ara(phonetic)"
+    name[Group1]= "Arabic - digits3";
+
+    key <AE01> { [ 0x1000661, exclam,      1 ] };
+    key <AE02> { [ 0x1000662, at,          2 ] };
+    key <AE03> { [ 0x1000663, numbersign,  3 ] };
+    key <AE04> { [ 0x1000664, dollar,      4 ] };
+    key <AE05> { [ 0x1000665, percent,     5 ] };
+    key <AE06> { [ 0x1000666, asciicircum, 6 ] };
+    key <AE07> { [ 0x1000667, ampersand,   7 ] };
+    key <AE08> { [ 0x1000668, asterisk,    8 ] };
+    key <AE09> { [ 0x1000669, parenleft,   9 ] };
+    key <AE10> { [ 0x1000660, parenright,  0 ] };
+};
+
